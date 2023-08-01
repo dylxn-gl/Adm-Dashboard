@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+html {
+  background-image: url(https://i.pinimg.com/originals/4e/84/26/4e842693987d9832720b8e151dd7c287.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: "Poppins", sans-serif;
+  font-size: small;
+  color: #ffffff;
+  height: 100vh;
+}
+
+body {
+  padding: 8px;
+  display: flex;
+  background-color: #252525;
+  border-radius: 8px;
+  height: 100vh;
+  overflow: hidden;
+}
+
+body aside {
+  padding: 24px 16px 24px 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+  border-radius: 8px 0 0 8px;
+}
+
+body aside picture {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+body aside picture img {
+  height: 50px;
+}
+
+body aside picture figcaption {
+  font-size: 20px;
+}
+
+body aside nav {
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+}
+
+body aside nav ul {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+body aside nav ul li {
+  list-style: none;
+}
+
+body aside nav ul li a {
+  padding: 4px 8px 4px 12px;
+  display: flex;
+  gap: 24px;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 20px;
+}
+
+#home,
+body aside nav ul li a:is(:hover, :focus) {
+  background-color: #404040;
+  border-radius: 8px;
+}
+
+#home i,
+body aside nav ul li a:is(:hover, :focus) i {
+  color: #01c380;
+}
+
+@media only screen and (max-width: 480px) {
+  body {
+    flex-direction: column;
+    align-items: center;
+    overflow: scroll;
+    height: auto;
+  }
+
+  body aside {
+    padding: 16px 8px;
+  }
+
+  body aside nav {
+    display: none;
+  }
+}

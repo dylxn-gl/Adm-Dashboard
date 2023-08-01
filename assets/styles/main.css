@@ -1,0 +1,213 @@
+body main {
+  padding: 16px 32px;
+  background-color: #e4e4e4;
+  color: #000000;
+  border-radius: 8px;
+  width: 100%;
+  height: 100%;
+}
+
+#top-div section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#top-div section h1 {
+  font-size: 32px;
+}
+
+#top-div section h1 span {
+  color: #01c380;
+}
+
+#top-div section nav ul {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+#top-div section nav ul li {
+  list-style: none;
+}
+
+#top-div section nav ul li a {
+  padding: 8px;
+  display: grid;
+  place-items: center;
+  text-decoration: none;
+  color: #000000;
+  font-size: 24px;
+}
+
+#github {
+  color: #01c380;
+}
+
+body main hr {
+  margin: 16px 0;
+  border: 1px solid #d9d9d9;
+}
+
+#top-div section nav ul li a:is(:hover, :focus) {
+  color: #01c380;
+}
+
+#bottom-div {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas:
+    "work work anouncements"
+    "work work top";
+  height: 85%;
+  width: 100%;
+}
+
+#works {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  grid-area: work;
+}
+
+#projectsContainer {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.project {
+  padding: 4px 8px 0 8px;
+  width: 320px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 30px;
+  backdrop-filter: blur(5px);
+  padding: 16px 32px 32px;
+  background: rgba(100, 100, 100, 0.2);
+  border-radius: 8px;
+}
+
+.project h3 {
+  margin: 8px 0;
+}
+
+.project ul {
+  margin: 8px 0 0 0;
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 16px;
+}
+
+.project ul li {
+  list-style: none;
+}
+
+.project ul li a {
+  text-decoration: none;
+  color: #252525;
+  font-size: 24px;
+}
+
+.project ul li a:is(:hover, :focus) {
+  color: #01c380;
+}
+
+#anouncements {
+  padding: 24px 16px 24px 8px;
+  gap: 8px;
+}
+
+#articles {
+  grid-area: anouncements;
+  padding: 24px 16px 24px 8px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 30px;
+  backdrop-filter: blur(5px);
+  background: rgba(100, 100, 100, 0.2);
+  border-radius: 8px;
+}
+
+#articles article {
+  cursor: pointer;
+}
+
+#articles h3 {
+  color: #01c380;
+}
+
+#articles hr,
+#top hr {
+  border: 1px solid #757575;
+}
+
+#top {
+  grid-area: top;
+  padding: 24px 16px 24px 8px;
+  gap: 8px;
+}
+
+#top img {
+  border-radius: 4px;
+}
+
+#topContainer {
+  padding: 24px 16px 24px 8px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 30px;
+  backdrop-filter: blur(5px);
+  background: rgba(100, 100, 100, 0.2);
+  border-radius: 8px;
+  gap: 16px;
+}
+
+#first {
+  color: #01c380;
+}
+
+@media only screen and (max-width: 480px) {
+  body main {
+    padding: 16px 8px;
+    height: auto;
+  }
+
+  #top-div section {
+    flex-direction: column-reverse;
+  }
+
+  #top-div section nav ul {
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  #bottom-div {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas:
+      "work"
+      "anouncements"
+      "top";
+  }
+
+  #works,
+  #anouncements,
+  #top {
+    align-items: center;
+  }
+
+  .project {
+    width: 100%;
+  }
+
+  #articles article {
+    width: 100%;
+  }
+
+  #topContainer,
+  #top picture {
+    width: 100%;
+  }
+}
